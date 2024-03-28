@@ -1,0 +1,83 @@
+@import "../../Styles/Breakpoints.scss";
+@import "../../Styles/Fonts.scss";
+@import "../../Styles/Variables.scss";
+
+.info {
+  display: flex;
+  overflow-y: scroll;
+  @include breakpoint-(md) {
+    margin: 0px 50px 20px 50px;
+    overflow-y: scroll;
+    padding: 20px 0px;
+    // justify-content: center;
+  }
+  @include breakpoint-(lg) {
+    margin: 50px 90px 20px 90px;
+    overflow-y: hidden;
+    padding: 20px 0px;
+    justify-content: center;
+  }
+  @include breakpoint-(xl) {
+    margin: 80px 140px 40px 140px;
+    overflow-y: hidden;
+    padding: 20px 0px;
+  }
+  .info-block {
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 18px;
+    background-color: $white-color;
+    padding: 17px;
+    margin: 25px 16px;
+    min-width: 70%;
+    @include breakpoint-(md) {
+      min-width: 50%;
+      margin: 0px 16px;
+    }
+    @include breakpoint-(lg) {
+      min-width: 25%;
+      margin: 0px 16px;
+    }
+
+    .info-stats {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      p {
+        color: $red-color;
+        @include poppins-700;
+        font-size: 22px;
+        @include breakpoint-(lg) {
+          font-size: 32px;
+          @include poppins-600;
+        }
+      }
+    }
+    info-state:nth-child(2) p {
+      color: $green-color;
+    }
+    p {
+      color: $subText-color;
+      @include poppins-400;
+      font-size: 14px;
+      width: 90%;
+
+      @include breakpoint-(lg) {
+      }
+    }
+  }
+  .info-block:nth-child(2) .info-stats p {
+    color: $green-color;
+  }
+  .info-block:nth-child(3) .info-stats p {
+    color: $royalblue-color;
+  }
+}
+
+.info-by {
+  width: full-available;
+  text-align: center;
+  @include poppins-400;
+  color: $subText-color;
+  font-size: 10px;
+}

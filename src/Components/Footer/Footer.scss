@@ -1,0 +1,176 @@
+@import "../../Styles/Breakpoints.scss";
+@import "../../Styles/Fonts.scss";
+@import "../../Styles/Variables.scss";
+
+.footer {
+  background-color: $white-color;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px 20px 18px;
+
+  @include breakpoint-(lg) {
+    flex-direction: row;
+    padding: 40px 50px 30px 50px;
+  }
+  @include breakpoint-(xl) {
+    flex-direction: row;
+    padding: 60px 80px 50px 80px;
+  }
+  .contactInfo {
+    width: fill-available;
+    @include breakpoint-(lg) {
+      width: 40%;
+    }
+    h2 {
+      @include poppins-600;
+      color: $black-heading;
+      font-size: 14px;
+      @include breakpoint-(lg) {
+        font-size: 28px;
+        margin: 0px;
+      }
+      @include breakpoint-(xl) {
+        font-size: 32px;
+        margin: 0px;
+      }
+    }
+    p {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      @include poppins-400;
+      font-size: 12px;
+      margin: 15px 0px;
+
+      @include breakpoint-(lg) {
+        font-size: 13px;
+        margin: 20px 0px;
+        width: 80%;
+      }
+      @include breakpoint-(xl) {
+        font-size: 14px;
+        margin: 20px 0px;
+        width: 80%;
+      }
+
+      img {
+        margin-right: 20px;
+      }
+    }
+    p:nth-child(1) {
+      @include poppins-500;
+    }
+  }
+  .qlinks {
+    width: fill-available;
+    @include breakpoint-(lg) {
+      width: 40%;
+    }
+    h2 {
+      @include poppins-600;
+      font-size: 14px;
+      color: $black-heading;
+      @include breakpoint-(lg) {
+        font-size: 28px;
+        margin: 0px;
+      }
+      @include breakpoint-(xl) {
+        font-size: 32px;
+        margin: 0px;
+      }
+    }
+    ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0px;
+      @include breakpoint-(lg) {
+        justify-content: flex-start;
+      }
+      li {
+        @include poppins-300;
+        width: 40%;
+        font-size: 12px;
+        color: $black-color;
+        margin-bottom: 15px;
+        @include breakpoint-(lg) {
+          font-size: 13px;
+          width: 40%;
+        }
+        @include breakpoint-(xl) {
+          font-size: 14px;
+          width: 40%;
+        }
+      }
+    }
+  }
+  .socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: fill-available;
+    @include breakpoint-(lg) {
+      width: 20%;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-top: 15px;
+    }
+    .app-link {
+      width: 40%;
+      @include breakpoint-(lg) {
+        width: fill-available;
+        margin-bottom: 25px;
+      }
+      p {
+        @include poppins-400;
+        font-size: 10px;
+        margin-bottom: 15px;
+        color: $black-color;
+        @include breakpoint-(lg) {
+          font-size: 12px;
+        }
+      }
+      img {
+        width: 120px;
+        height: 35px;
+        @include breakpoint-(lg) {
+          width: 150px;
+          height: 45px;
+        }
+      }
+    }
+    .social-link {
+      width: 40%;
+      @include breakpoint-(lg) {
+        width: fill-available;
+      }
+      p {
+        @include poppins-400;
+        font-size: 10px;
+        color: $black-color;
+        margin-bottom: 15px;
+        @include breakpoint-(lg) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+.copyright {
+  background-color: $primary-color;
+  color: $white-color;
+  text-align: center;
+  padding: 5px 0px;
+  p {
+    @include poppins-400;
+    font-size: 10px;
+
+    @include breakpoint-(lg) {
+      @include poppins-500;
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+// Mixin to generate media queries
+@mixin breakpoint-($breakpoint) {
+  $breakpoints: (
+    sm: 640px,
+    md: 768px,
+    lg: 1024px,
+    xl: 1280px,
+    2xl: 1536px,
+  );
+
+  $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+  @if not $breakpoint-value {
+    @error "Unknown breakpoint #{$breakpoint}.";
+  }
+
+  @media (min-width: $breakpoint-value) {
+    @content;
+  }
+}
